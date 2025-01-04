@@ -3,10 +3,10 @@ import ExpenseItem from "./ExpenseItem";
 
 const ExpenseList = ({ expenses }) => {
   return (
-    <div>
-      <h2 className="text-lg font-medium text-gray-800 mb-2">Expenses</h2>
+    <div className="bg-gray-100 rounded p-4 shadow">
+      <h2 className="text-lg font-bold text-gray-800 mb-4">Expenses</h2>
       {expenses.length > 0 ? (
-        <ul className="divide-y divide-gray-200">
+        <ul>
           {expenses.map((expense) => (
             <ExpenseItem key={expense.id} expense={expense} />
           ))}
