@@ -7,7 +7,7 @@ const CategoryOverview = ({ expenses }) => {
   });
 
   return (
-    <div className="mb-6">
+    <div className="mb-2 mt-4">
       <h2 className="text-lg font-bold text-gray-800 mb-4">Category Overview</h2>
       {Object.keys(categoryTotals).length > 0 ? (
         <ul className="divide-y divide-gray-300">

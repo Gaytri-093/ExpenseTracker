@@ -32,7 +32,7 @@ const ExpenseForm = ({ onAddExpense }) => {
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400"
+          className="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400 outline-none"
           placeholder="Enter expense title"
         />
       </div>
@@ -42,7 +42,7 @@ const ExpenseForm = ({ onAddExpense }) => {
           type="number"
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
-          className="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400"
+          className="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400 outline-none"
           placeholder="Enter expense amount"
         />
       </div>
@@ -52,7 +52,7 @@ const ExpenseForm = ({ onAddExpense }) => {
           type="date"
           value={date}
           onChange={(e) => setDate(e.target.value)}
-          className="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400"
+          className="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400 outline-none"
         />
       </div>
       <div className="mb-4">
@@ -60,7 +60,7 @@ const ExpenseForm = ({ onAddExpense }) => {
         <select
           value={category}
           onChange={(e) => setCategory(e.target.value)}
-          className="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400"
+          className="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-400 outline-none"
         >
           <option value="groceries">Groceries</option>
           <option value="entertainment">Entertainment</option>

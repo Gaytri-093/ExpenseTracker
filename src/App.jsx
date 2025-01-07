@@ -20,6 +20,11 @@ const App = () => {
     localStorage.setItem("expenses", JSON.stringify(expenses));
   }, [expenses]);
 
+  const handleDeleteExpense = (id) => {
+    const updatedExpenses = expenses.filter((expense) => expense.id !== id);
+    setExpenses(updatedExpenses);
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 p-6">
       <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-lg p-8">
@@ -29,7 +34,8 @@ const App = () => {
         </div>
         <ExpenseForm onAddExpense={addExpense} />
         <CategoryOverview expenses={expenses} />
-        <ExpenseList expenses={expenses} />
+        <ExpenseList expenses={expenses} onDeleteExpense={handleDeleteExpense}  />
+        
       </div>
     </div>
   );
